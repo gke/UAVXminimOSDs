@@ -11,7 +11,7 @@ There are two versions:
 
 UAVXOSD telemetry permits additional information including explicit navigation guidance information produced by UAVX. 
 
-*WARNING*: the baseline versions of minimOSD infer the home position to be the first GPS position as received by minimOSD. If for any reason there is a mid-flight power-cycle or reset of the minimOSD board the home and potentially other information will be incorrect.
+*WARNING*: the baseline versions of minimOSD infer the home position to be the first GPS position as received by minimOSD. If for any reason there is a mid-flight power-cycle or reset of the minimOSD board the home and potentially other information will be incorrect. Adding a suitable electrolytic capacitor across the minimOSD supply pins "may" reduce the risk.
 
 
 
