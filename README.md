@@ -1,7 +1,7 @@
 ## UAVXminimOSDs ##
 
 MinimOSD is a simple on screen display adapter which mixes flight data into real-time inflight video telemetry. 
-There are many variants of this code but the ones here are derived from a very early version which compiles under Arduino 1.0.5-r2 which is available as a legacy off the Arduino main site. MinimOSD is not a mainstream UAVX interest so this code is provided for completeness only.
+There are many variants of this code but the ones here are derived from a very early version which compiles under Arduino 1.0.5-r2 This version of the development environment is available as a legacy off the Arduino main site. MinimOSD is not a mainstream UAVX interest so this code is provided for completeness only.
 
 There are two versions:
 
