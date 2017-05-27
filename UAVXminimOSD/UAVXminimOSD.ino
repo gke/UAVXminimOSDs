@@ -173,7 +173,11 @@ void loop()
     mavLinkTimer = millis();
     OnMavlinkTimer();
   }
+#if defined(UAVX)
+  read_uavxlink();
+#else
   read_mavlink();
+#endif
   //mavlinkTimer.Run();
 }
 
@@ -197,6 +201,7 @@ void unplugSlaves(){
 #endif
   digitalWrite(MAX7456_SELECT,  HIGH); // unplug OSD
 }
+
 
 
 

@@ -1,4 +1,6 @@
 
+#if defined(UAVX)
+
 #define ASCII_NUL 0
 #define ASCII_SOH 1
 #define ASCII_EOT 4
@@ -214,7 +216,7 @@ void ProcessPacket() {
     osd_roll = UAVXPacketi16(8);
     osd_pitch = UAVXPacketi16(10);
 
-    osd_alt_rel = UAVXPacketi24(12);
+  //zzz  osd_alt_rel = UAVXPacketi24(12);
     osd_climb = UAVXPacketi16(15);
 
     osd_groundspeed = UAVXPacketi16(17);
@@ -231,7 +233,7 @@ void ProcessPacket() {
     wp_dist = UAVXPacketi16(34);
     xtrack_error = UAVXPacketi16(36); 
 
-    motor_armed =  UAVXPacketu8(38);
+    //zzz motor_armed =  UAVXPacketu8(38);
     osd_throttle = UAVXPacketi16(39);
 
     airframe_type = UAVXPacketi16(41);
@@ -239,10 +241,10 @@ void ProcessPacket() {
     break;
 
   case UAVXRCChannelsPacketTag:    
-    chan5_raw = UAVXPacketi16(10); 
-    chan6_raw = UAVXPacketi16(12);
-    chan7_raw = UAVXPacketi16(14);
-    chan8_raw = UAVXPacketi16(16);
+    chan_raw[5] = UAVXPacketi16(10); 
+    chan_raw[6] = UAVXPacketi16(12);
+    chan_raw[7] = UAVXPacketi16(14);
+    chan_raw[8] = UAVXPacketi16(16);
     break;
   default: 
     break;
@@ -288,6 +290,7 @@ void read_uavxlink() {
   }
 } // read_uavxlink
 
+#endif
 
 
 

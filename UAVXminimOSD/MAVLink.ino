@@ -1,3 +1,7 @@
+
+
+#if !defined(UAVX)
+
 #include "../GCS_MAVLink/include/mavlink/v1.0/mavlink_types.h"
 #include "../GCS_MAVLink/include/mavlink/v1.0/ardupilotmega/mavlink.h"
 
@@ -156,6 +160,7 @@ void read_mavlink(){
 
 }
 
+#endif
 
 
 

@@ -7,6 +7,7 @@
 #define VER 76
 
 //#define DEBUG
+//#define UAVX
 
   enum NavStates{
     HoldingStation,
